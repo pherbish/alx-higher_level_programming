@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """DEfining a subclass rectangle"""
-from base import Base
+from  models.base import Base
 class Rectangle(Base):
     """The class inherits from base class"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -29,9 +29,9 @@ class Rectangle(Base):
     def height(self, value):
          if type(value) != int:
             raise TypeError("height must be an integer")
-        if value <= 0:
+         if value <= 0:
             raise ValueError ("height must be > 0")
-        self.__height = value
+         self.__height = value
     
     @property
     def x(self):
