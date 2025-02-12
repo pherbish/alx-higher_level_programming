@@ -10,3 +10,6 @@ body_size=$(curl -sI "$1" | grep -i Content-Length | awk '{print $2}' | tr -d '\
 
 # Display the size of the response body in bytes
 echo "$body_size"
+# Get the byte size of the HTTP response header for a given URL.
+curl -s "$1" | wc -c
+
